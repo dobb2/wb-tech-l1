@@ -217,11 +217,37 @@ func (left *BigInt) Division(right BigInt) {
 }
 
 func main() {
-	bint := BigInt{}
-	bint.Read("90000000400000")
-	bint2 := BigInt{}
-	bint2.Read("30000000000")
-	bint.Division(bint2)
-	fmt.Println(bint.Write())
+	// Деление нацело
+	division := BigInt{}
+	division.Read("3000000000000")
+	division2 := BigInt{}
+	division2.Read("300000000090")
+	division.Division(division2)
+	fmt.Println(division.Write())
 
+	// сумма
+	add := BigInt{}
+	add.Read("4000000000")
+	add2 := BigInt{}
+	add2.Read("4234400000")
+	add.Addition(add2)
+	fmt.Println(add.Write())
+
+	// разность
+	min := BigInt{}
+	min.Read("555555555555")
+	min2 := BigInt{}
+	min2.Read("455555555555")
+	min.Subtracting(min2)
+	fmt.Println(min.Write())
+
+	// умножение
+	mult := BigInt{}
+	mult.Read("555555555555")
+	mult2 := BigInt{}
+	mult2.Read("455555555555")
+	mult.Multiplication(mult2)
+	fmt.Println(mult.Write())
 }
+
+
